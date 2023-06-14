@@ -8,7 +8,7 @@ serve(async (request) => {
       const headers = new Headers(request.headers);
     headers.set('origin', 'https://github.com');
       
-       const req = new Request(_url, {
+       const req = new Request(url, {
       method: request.method,
       headers: headers,
       body: request.body,
