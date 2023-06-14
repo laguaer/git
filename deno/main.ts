@@ -4,8 +4,8 @@ serve(async (request) => {
       const url = new URL(request.url);
       const hostname = url.hostname;
       url.host = "github.com";
-  
-      request.headers.set('origin', 'https://github.com');
+      const req = new Request(url, request);
+      req.headers.set('origin', 'https://github.com');
       
       let newRes = await fetch(url, request)
       
