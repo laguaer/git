@@ -12,7 +12,7 @@ serve(async (request) => {
     
     let location = newRes.headers.get('location');
     if (location !== null && location !== "") {
-        location = location.replace('://gihub.com', '://' + hostname);
+        location = location.replace('://github.com', '://' + hostname);
         newRes.headers.set('location', location);
     }
     return newRes
